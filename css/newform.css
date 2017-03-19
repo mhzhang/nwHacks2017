@@ -1,5 +1,14 @@
+
+
 html{
     background-color: #f3f3f3;
+}
+
+body {
+    font-family: "Rubik", 'Courier', sans-serif; /* Get a custom font and change this later! */
+    color: #909090;
+    font-size: 1.2em;
+    line-height: 2em;
 }
 
 .newform{
@@ -81,7 +90,7 @@ html{
 .newform .form-radio-buttons input{
     width: auto;
 }
-
+/*
 .newform button{
     border-radius: 2px;
     background-color:  #6caee0;
@@ -91,6 +100,51 @@ html{
     padding: 14px 22px;
     border: 0;
     margin-top: 15px;
+}*/
+
+.newform button {
+    background-color: #60DBF7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.newform button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #60DBF7;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 8px;
+}
+.button:hover, .button:focus, .button:active {
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button:hover:before, .button:focus:before, .button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+    border-radius: 8px;
 }
 
 /*	Making the form responsive. Remove this media query
