@@ -69,7 +69,7 @@ function initializeTitle() {
 		$('#home-button').hide();
 	$('#dog').hide();
 	$('#dog-pic').hide();
-	$('.selection').click(function(){
+	$('#cooper').click(function(){
 	   	myDog = findDogGivenName($(this).attr('id'));
 		$('#continue-button').prop('disabled',true);
     	setTimeout(function(){
@@ -274,7 +274,7 @@ function initializeResults() {
 
 function initializeMoreInfo() {
     $('#title').html("<span style='font-size: 40px;'>Ways to make a difference</span>");
-    $('#take-action').show();
+    $('#take-action').hide();
     $('#text').hide();
 	$('#continue-button').text("Back to home");
 	$('#continue-button').click(function() {
