@@ -23,6 +23,16 @@
 
 </head>
 
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "{controller}/{action}/{id}", success: function(result){
+            $("#div1").html(result); //put data into profile
+        }});
+    });
+});
+</script>
+
 <body>
 	<div id="visitors">
     <div id="instructions"><p></p></div>
