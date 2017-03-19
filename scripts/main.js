@@ -39,16 +39,17 @@ var myDog;
 */
 
 function initializeDogs() {
-	dogs[0]  = new Dog("cooper", "Meet Cooper! Cooper is a four year-old female pitbull. She was purchased from a pet store as a puppy, but was left behind in the city when her owners moved. She has been a shelter resident for the past six months and is looking for a new home. Cooper loves chew toys, playing fetch, and taking naps in the sun. She’s a loveable and loyal dog that also wants to be loved by a new family. Try to get adopted!", ["This leaves many perfectly trainable and loveable dogs like Cooper stuck in shelters.", "Sadly, Vanessa decides not to adopt Cooper. She doesn’t like that Cooper is a pitbull, and wants to look for a different breed, probably purebred. Like many potential adopters, Vanessa has misconceptions about pitbulls in general, even though many of them don’t have behavioral problems.", "Unfortunately, Heidi decides not to adopt Cooper. She is scared that Cooper will have behavioral problems after being abandoned by her previous owners, and doesn’t want to deal with re-training an adopted dog. In reality, her belief in the saying “old dogs can’t learn new tricks” is totally unfounded. Dogs never stop learning!", "Daniel decides not to adopt Cooper because he doesn’t know Cooper’s history, and doesn’t want to take a chance on a sheltered animal. Most of the time, however, pets are left behind because their owners can’t afford to take care of them anymore, not necessarily because of behavioral issues. All Cooper really needs is some love and care, and a new home!", "Daniel decides to adopt Cooper. Cooper seems like he loves being with people, and would be a loyal companion. Cooper also looks like a dog that would be compatible with his dogs at home. Congratulations!"], dogChances[0]);
+	dogs[0]  = new Dog("cooper", "This is Andy Anderson. He was born on 1996-05-27. He speaks English and French. He is allergic to egg and cat. In detail, he is allergic to eggyolk. He has hearing disability, who needs extra assistance in class to help with hearing. For 16 personal characteristics test, he is a warm and sensitive person who really needs his own privacy. ", dogChances[0]);
 	//, criticIndex);
 	dogs[1] = new Dog("luna",  "intro", ["Olivia", "Vanessa", "Heidi", "Daniel"])//, dogChances[1], criticIndex);
 	// dogs[2] = new Dog("loki",  "intro", ["Olivia", "Vanessa", "Heidi", "Daniel"], dogChances[2], criticIndex);
 	// dogs[3] = new Dog("ace",  "intro", ["Olivia", "Vanessa", "Heidi", "Daniel"], dogChances[3], criticIndex);
-}
+} 
 
 $(document).ready(function () {
   initializeDogs();
 	initializeTitle(); //Initialize title.
+    document.getElementsById("form").innerHTML;
 });
 
 function findDogGivenName(name) {
@@ -153,7 +154,7 @@ function initializeResults() {
     $('#visitors').show(); //show suggestions
     $('#next-button').hide();
 		//$('#comments p').html("<br><b>" + "<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>" + "</b>" + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
-    $('#comments p').html("Put suggestions here.");
+    $('#comments p').html("From our training model, Andy scored 1 for both verbal and material rewards, which means doing verbal and material rewards would help Andy perform better. We came up to conclusion that teachers and parents should use both material and verbal rewards to have a positive impact on Andy.");
 		$('#home-button').show();
 		$('#home-button').click(function(){
 			location.reload();//Initialize title.
