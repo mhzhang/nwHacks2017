@@ -80,6 +80,7 @@ function initializeTitle() {
 }
 
 
+
 function initializeDogIntro() {
 	$('#dog-selection-panel').hide();
   $("#pick-a-pupper").hide();
@@ -94,6 +95,11 @@ function initializeDogIntro() {
 	$('#continue-button').click(function(){
 		initializeComplex();
 	});
+	$('#create-form').click(function(){
+		initializeComplex();
+	});
+
+
 }
 
 // function generatePositiveComment() {
