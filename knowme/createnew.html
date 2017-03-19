@@ -4,14 +4,27 @@
 <head>
 
 	<link rel="stylesheet" href="css/newform.css">
+        <script src="scripts/createnew.js"></script>
 
 </head>
+<SCRIPT LANGUAGE="JavaScript">
+function insertnewstudent (form) {
+    var firstname = form.fn.value;
+    var lastname = form.ln.value;
+    var birthday = form.bday.value;
+    var gender = form.gen.value;
+    var language = form.lan.value;
+    var allergies = form.all.value;
+    var alldetail = form.allde.value;
+    var disabilities = form.dis.value;
+    var disdetail = form.disde.value;
+    alert ("You typed: " + firstname + lastname + birthday + gender + language + allergies + alldetail + disabilities + disdetail);
+}
+</SCRIPT>
     
 <div class="main-content">
 
-        <!-- You only need this form and the newform.css -->
-
-        <form class="newform" method="get" action="#">
+        <form class="newform" method="get" action="">
 
             <div class="form-title-row">
                 <h1>New Profile</h1>
@@ -19,22 +32,78 @@
 
             <div class="form-row">
                 <label>
-                    <span>Full name</span>
-                    <input type="text" name="name">
+                    <span>First Name</span>
+                    <input type="text" name="fn" value="">
                 </label>
             </div>
 
             <div class="form-row">
                 <label>
-                    <span>Email</span>
-                    <input type="email" name="email">
+                    <span>Last Name</span>
+                    <input type="text" name="ln" value="">
                 </label>
             </div>
+            
+            <div class="form-row">
+                <label>
+                    <span>Birthday</span>
+                    <input type="date" name="bday" value="">
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label>
+                    <span>Gender</span>
+                    <input type="text" name="gen" value="">
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label>
+                    <span>Languages</span>
+                    <input type="text" name="lan" value="">
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label>
+                    <span>Allergies</span>
+                    <input type="text" name="all" value="">
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label>
+                    <span>Allergies Detail</span>
+                    <input type="text" name="allde" value="">
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label>
+                    <span>Disabilities</span>
+                    <input type="text" name="dis" value="">
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label>
+                    <span>Disabilities Detail: How disabilities are handled in the past</span>
+                    <input type="text" name="disde" value="">
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label>
+                    <span>Disabilities</span>
+                    <input type="text" name="dis" value="">
+                </label>
+            </div>
+            
 
             <div class="form-row">
-               <button type="submit">Submit Form</button>
+               <input type="submit" name="button" Value="Submit Form" onClick="insertNewStudent(this.form)">
             </div>
-
         </form>
     </div>
 <body>
