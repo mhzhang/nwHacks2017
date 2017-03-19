@@ -11,10 +11,6 @@ body {
 html {
     height: 100%;
 }
-body {
-    height: 100%;
-}
-
 
 a {
     text-decoration: none;
@@ -77,10 +73,10 @@ h1 {
     line-height: 22px;
     letter-spacing: 1px;
     line-height: 3em;
-    color: #ff7f9a;
+    color: #41C9F4;
     margin: 0 auto;
     padding-bottom: 1.2em;
-    border-bottom: 4px solid #ff7f9a;
+    border-bottom: 4px solid #41C9F4;
     margin-bottom: 1.5em;
 }
 
@@ -141,6 +137,64 @@ h1 {
     border-radius: 8px;
 }
 
+
+#home-button {
+    width: 180px;
+    height: 60px;
+    font-family: "Karla";
+    font-weight: 400;
+    color: #18CBF5;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 3em; /* Center the text */
+    letter-spacing: .15em;
+    margin: 0 auto;
+    border: 1px solid #18CBF5;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#home-button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #60DBF7;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 8px;
+}
+#home-button:hover, #home-button:focus, #home-button:active {
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#home-button:hover:before, #home-button:focus:before, #home-button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+    border-radius: 8px;
+}
+
 .actions {
     width: 180px;
     height: 60px;
@@ -159,19 +213,27 @@ h1 {
 
 #visitors, #adopt, #donate, #foster {
     border: 2px solid #E7E7E7;
-    border-radius: 5em;
+    padding: 10px 40px;
+    width: 300px;
+    border-radius: 11px;
 }
 
 #visitors {
-    position: absolute;
+    /*position: absolute;
     display: block;
     height: calc(100% - 100px);
-    width: calc(33% - 100px);
-    float: right;
-    top: 0;
+    width: calc(33% - 100px);*/
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*float: right;*/
+    /*top: 0;
     right: 0px;
-    margin: 50px;
-    margin-left: 0;
+    margin: 50px;*/
+    /*margin-left: 0;*/
 }
 
 #take-action {
