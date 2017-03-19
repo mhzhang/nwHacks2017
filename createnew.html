@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
 
 	<link rel="stylesheet" href="css/newform.css">
+        <script src="scripts/createnew.js"></script>
 
 </head>
 <SCRIPT LANGUAGE="JavaScript">
-function insertNewStudent (form) {
+function insertnewstudent (form) {
     var firstname = form.fn.value;
     var lastname = form.ln.value;
     var birthday = form.bday.value;
@@ -17,38 +18,37 @@ function insertNewStudent (form) {
     var alldetail = form.allde.value;
     var disabilities = form.dis.value;
     var disdetail = form.disde.value;
-    var pomr = form.pm.value;
-    var nemr = form.nm.value;
-    var povr = form.pv.value;
-    var nevr = form.nv.value;
-    var warmth = form.w.value;
-    var reasoning = form.r.value;
-    var emotional = form.e.value;
-    var dominance = form.d.value;
-    var liveliness = form.l.value;
-    var rule-Consciousness = form.c.value;
-    var social = form.s.value;
-    var sensitivity = form.se.value;
-    var vigilance = form.v.value;
-    var abstractedness = form.a.value;
-    var privateness = form.p.value;
-    var apprehension = form.ap.value;
-    var openness = form.o.value;
-    var self = form.sel.value;
-    var perfectionism = form.pe.value;
-    var tension = form.t.value; 
     alert ("You typed: " + firstname + lastname + birthday + gender + language + allergies + alldetail + disabilities + disdetail);
 }
 </SCRIPT>
-    
+
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "demo_test.txt", success: function(result){
+            $("#div1").html(result); //put data into profile
+        }});
+    });
+});
+</script>
+
+<body>
 <div class="main-content">
 
         <form class="newform" method="get" action="">
-
             <div class="form-title-row">
                 <h1>New Profile</h1>
             </div>
-            <p>By creating this profile for our beloved students/children, we empower them along their journey.</p>
+
             <div class="form-row">
                 <label>
                     <span>First Name</span>
@@ -62,355 +62,78 @@ function insertNewStudent (form) {
                     <input type="text" name="ln" value="">
                 </label>
             </div>
-            
+
             <div class="form-row">
                 <label>
                     <span>Birthday</span>
                     <input type="date" name="bday" value="">
                 </label>
             </div>
-            
+
             <div class="form-row">
                 <label>
                     <span>Gender</span>
                     <input type="text" name="gen" value="">
                 </label>
             </div>
-            
+
             <div class="form-row">
                 <label>
                     <span>Languages</span>
                     <input type="text" name="lan" value="">
                 </label>
             </div>
-            
+
             <div class="form-row">
                 <label>
                     <span>Allergies</span>
                     <input type="text" name="all" value="">
                 </label>
             </div>
-            
+
             <div class="form-row">
                 <label>
                     <span>Allergies Detail</span>
-                    <input type="text" name="allde" value="" style="height: 200px;">
+                    <input type="text" name="allde" value="">
                 </label>
             </div>
-            
+
             <div class="form-row">
                 <label>
                     <span>Disabilities</span>
                     <input type="text" name="dis" value="">
                 </label>
             </div>
-            
+
             <div class="form-row">
                 <label>
                     <span>Disabilities Detail: How disabilities are handled in the past</span>
-                    <input type="text" name="disde" value="" style="height: 200px;">
+                    <input type="text" name="disde" value="">
                 </label>
             </div>
-            
+
             <div class="form-row">
                 <label>
-                    <span>Rewards Reaction: How students react to different type of rewards, postive or negative</span>
-                    <span>Positive to Material Rewards</span> 
-                    <input type="text" name="pm" value="" > <br>
-                    <br>
-                    <span>Negative to Material Rewards</span>
-                    <input type="text" name="nm" value="" > <br>
-                    <br>
-                    <span>Positive to Verbal Rewards</span>
-                    <input type="text" name="pv" value="" > <br>
-                    <br>
-                    <span>Negative to Verbal Rewards</span>
-                    <input type="text" name="nv" value="" >
+                    <span>Disabilities</span>
+                    <input type="text" name="dis" value="">
+                </label>
             </div>
-                
-            <div class="form-row">
-                <label><span>Personality Factors Test</span></label>
-                <label><span>Warmth</span></label>
-                <div class="form-radio-buttons">
-                    <div>
-                        <label>
-                            <input type="radio" name="w">
-                            <span>Impersonal, distant, cool, reserved, detached, formal, aloof</span>
-                        </label>
-                    </div>
 
-                    <div>
-                        <label>
-                            <input type="radio" name="w">
-                            <span>Warm, outgoing, attentive to others, kindly, easy-going, participating, likes people</span>
-                        </label>
-                    </div>
-                </div>
-            
-                <label><span>Reasoning</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="r">
-                            <span>Concrete thinking, lower general mental capacity, less intelligent, unable to handle abstract problems</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="r">
-                            <span>Abstract-thinking, more intelligent, bright, higher general mental capacity, fast learner</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Emotional Stability</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="e">
-                            <span>Reactive emotionally, changeable, affected by feelings, emotionally less stable, easily upset</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="e">
-                            <span>Emotionally stable, adaptive, mature, faces reality calmly</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Dominance</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="d">
-                            <span>Deferential, cooperative, avoids conflict, submissive, humble, obedient, easily led, docile, accommodating</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="d">
-                            <span>Dominant, forceful, assertive, aggressive, competitive, stubborn, bossy</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Liveliness</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="l">
-                            <span>Serious, restrained, prudent, taciturn, introspective, silent</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="l">
-                            <span>Lively, animated, spontaneous, enthusiastic, happy go lucky, cheerful, expressive, impulsive</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Rule-Consciousness</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="c">
-                            <span>Expedient, nonconforming, disregards rules, self-indulgent</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="c">
-                            <span>Rule-conscious, dutiful, conscientious, conforming, moralistic, staid, rule bound</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Social Boldness</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="s">
-                            <span>Shy, threat-sensitive, timid, hesitant, intimidated</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="s">
-                            <span>Socially bold, venturesome, thick skinned, uninhibited</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Sensitivity</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="se">
-                            <span>Utilitarian, objective, unsentimental, tough minded, self-reliant, no-nonsense, rough</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="se">
-                            <span>Sensitive, aesthetic, sentimental, tender minded, intuitive, refined</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Vigilance</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="v">
-                            <span>Trusting, unsuspecting, accepting, unconditional, easy</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="v">
-                            <span>Vigilant, suspicious, skeptical, distrustful, oppositional</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Abstractedness</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="a">
-                            <span>Grounded, practical, prosaic, solution oriented, steady, conventional</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="a">
-                            <span>Abstract, imaginative, absent minded, impractical, absorbed in ideas</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Privateness</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="p">
-                            <span>Forthright, genuine, artless, open, guileless, naive, unpretentious, involved</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="p">
-                            <span>Private, discreet, nondisclosing, shrewd, polished, worldly, astute, diplomatic</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Apprehension</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="ap">
-                            <span>Self-Assured, unworried, complacent, secure, free of guilt, confident, self-satisfied</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="ap">
-                            <span>Apprehensive, self doubting, worried, guilt prone, insecure, worrying, self blaming</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Openness to Change</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="o">
-                            <span>Traditional, attached to familiar, conservative, respecting traditional ideas</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="o">
-                            <span>Open to change, experimental, liberal, analytical, critical, free thinking, flexibility</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Self-Reliance</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="sel">
-                            <span>Group-oriented, affiliative, a joiner and follower dependent</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="sel">
-                            <span>Self-reliant, solitary, resourceful, individualistic, self-sufficient</span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Perfectionism</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="pe">
-                            <span>Tolerates disorder, unexacting, flexible, undisciplined, lax, self-conflict, impulsive, careless of social rules, uncontrolled</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="pe">
-                            <span>Perfectionistic, organized, compulsive, self-disciplined, socially precise, exacting will power, control, self-sentimental/span>
-                        </label>
-                    </div>
-                </div>
-                <label><span>Tension</span></label>
-                <div class="form-radio-buttons">
-
-                    <div>
-                        <label>
-                            <input type="radio" name="t">
-                            <span>Relaxed, placid, tranquil, torpid, patient, composed low drive</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="t">
-                            <span>Tense, high energy, impatient, driven, frustrated, over wrought, time driven.</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            
-
+            <div id = "create-form">
             <div class="form-row">
                <input type="submit" name="button" Value="Submit Form" onClick="insertNewStudent(this.form)">
             </div>
+
+            <div id = "home-button">
+              <button onclick="goBack()">Go Back</button>
+            </div>
+
+            <!-- <div id="div1"><h2>put ajax here</h2></div>
+
+            <button>Get External Content</button> -->
+          </div>
+
         </form>
     </div>
-<body>
-    
+</body>
 </html>

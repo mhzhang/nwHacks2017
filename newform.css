@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,500');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
 html{
     background-color: #f3f3f3;
+}
+
+body {
+    font-family: "Rubik", 'Courier', sans-serif; /* Get a custom font and change this later! */
+    color: #909090;
+    font-size: 1.2em;
+    line-height: 2em;
 }
 
 .newform{
@@ -82,7 +92,7 @@ html{
     width: auto;
 }
 
-.newform button{
+/*.newform button{
     border-radius: 2px;
     background-color:  #6caee0;
     color: #ffffff;
@@ -91,6 +101,64 @@ html{
     padding: 14px 22px;
     border: 0;
     margin-top: 15px;
+}*/
+
+#home-button {
+    width: 180px;
+    height: 60px;
+    font-family: "Karla";
+    font-weight: 400;
+    color: #18CBF5;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 3em; /* Center the text */
+    letter-spacing: .15em;
+    margin: 0 auto;
+    border: 1px solid #18CBF5;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#home-button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #60DBF7;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 8px;
+}
+#home-button:hover, #home-button:focus, #home-button:active {
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#home-button:hover:before, #home-button:focus:before, #home-button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+    border-radius: 8px;
 }
 
 /*	Making the form responsive. Remove this media query
