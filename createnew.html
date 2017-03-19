@@ -22,7 +22,15 @@ function insertnewstudent (form) {
 }
 </SCRIPT>
 
-
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "{controller}/{action}/{id}", success: function(result){
+            $("#div1").html(result); //put data into profile
+        }});
+    });
+});
+</script>
 <script>
 function goBack() {
     window.history.back();
@@ -31,20 +39,19 @@ function goBack() {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $.ajax({url: "demo_test.txt", success: function(result){
-            $("#div1").html(result); //put data into profile
-        }});
-    });
-});
-</script>
 
 <body>
 <div class="main-content">
 
+
         <form class="newform" method="get" action="">
+
+
+          <div id = "home-button1">
+            <button onclick="goBack()">Go Back</button>
+          </div>
+          <br>
+
             <div class="form-title-row">
                 <h1>New Profile</h1>
             </div>
@@ -124,13 +131,6 @@ $(document).ready(function(){
                <input type="submit" name="button" Value="Submit Form" onClick="insertNewStudent(this.form)">
             </div>
 
-            <div id = "home-button">
-              <button onclick="goBack()">Go Back</button>
-            </div>
-
-            <!-- <div id="div1"><h2>put ajax here</h2></div>
-
-            <button>Get External Content</button> -->
           </div>
 
         </form>
