@@ -1,0 +1,163 @@
+
+
+html{
+    background-color: #f3f3f3;
+}
+
+body {
+    font-family: "Rubik", 'Courier', sans-serif; /* Get a custom font and change this later! */
+    color: #909090;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+.newform{
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 55px;
+
+    background-color:  #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+
+    font: bold 14px sans-serif;
+    text-align: center;
+}
+
+.newform .form-row{
+    text-align: left;
+    max-width: 600px;
+    margin: 25px auto 0;
+}
+
+.newform .form-title-row{
+    margin: 0 auto 40px;
+}
+
+.newform h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color: #4C565E;
+    font-size: 24px;
+    padding: 0 0 12px 0;
+    margin: 0;
+    border-bottom: 2px solid #6CAEE0;
+}
+
+.newform .form-row > label span{
+    display: block;
+    box-sizing: border-box;
+    color:  #5f5f5f;
+    width: 600px;
+    padding: 0 0 12px;
+}
+
+.newform input{
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 600px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 18px;
+    border: 1px solid #dbdbdb;
+}
+
+.newform input[type=radio],
+.newform input[type=checkbox]{
+    box-shadow: none;
+    width: auto;
+}
+
+.newform select{
+    background-color: #ffffff;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 240px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 18px;
+    border: 1px solid #dbdbdb;
+}
+
+.newform .form-radio-buttons > div{
+    margin-bottom: 10px;
+}
+
+.newform .form-radio-buttons label span{
+    margin-left: 8px;
+    color:  #5f5f5f;
+    font-weight: normal;
+}
+
+.newform .form-radio-buttons input{
+    width: auto;
+}
+/*
+.newform button{
+    border-radius: 2px;
+    background-color:  #6caee0;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 22px;
+    border: 0;
+    margin-top: 15px;
+}*/
+
+.newform button {
+    background-color: #60DBF7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.newform button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #60DBF7;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 8px;
+}
+.button:hover, .button:focus, .button:active {
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button:hover:before, .button:focus:before, .button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+    border-radius: 8px;
+}
+
+/*	Making the form responsive. Remove this media query
+    if you don't need the form to work on mobile devices. */
+
+@media (max-width: 600px) {
+
+    .newform{
+        padding: 30px;
+    }
+
+    .newform input{
+        width: 240px;
+    }
+
+}
